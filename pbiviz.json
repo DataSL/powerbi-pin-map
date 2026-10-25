@@ -1,0 +1,38 @@
+{
+    "visual": {
+        "name": "dslPinMap",
+        "displayName": "Pin Map (Open Source)",
+        "guid": "dslPinMapA7DC7225BF5C4B4DBB4FD3139FADF5C1",
+        "visualClassName": "Visual",
+        "version": "1.0.0.0",
+        "description": "Interactive Leaflet map of your locations from latitude and longitude, with custom markers, three map styles and built-in filters.",
+        "supportUrl": "https://github.com/DataSL/powerbi-pin-map/issues",
+        "gitHubUrl": "https://github.com/DataSL/powerbi-pin-map"
+    },
+    "apiVersion": "5.10.0",
+    "author": {
+        "name": "Data SL Consulting",
+        "email": "contact@data-slconsulting.com"
+    },
+    "assets": {
+        "icon": "assets/icon.jpg"
+    },
+    "externalJS": null,
+    "style": "style/visual.less",
+    "privileges": [
+        {
+            "name": "WebAccess",
+            "essential": true,
+            "parameters": [
+                "https://*.openstreetmap.org",
+                "https://*.cartocdn.com",
+                "https://*.tile.openstreetmap.org",
+                "https://tile.openstreetmap.org",
+                "https://cdnjs.cloudflare.com"
+            ]
+        }
+    ],
+    "capabilities": "capabilities.json",
+    "dependencies": "dependencies.json",
+    "stringResources": []
+}

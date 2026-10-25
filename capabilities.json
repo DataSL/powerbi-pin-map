@@ -1,0 +1,117 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "Latitude",
+      "name": "latitude",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Longitude",
+      "name": "longitude",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Label",
+      "name": "label",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Filtres",
+      "name": "filters",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Description",
+      "name": "description",
+      "kind": "Measure"
+    }
+  ],
+  "objects": {
+    "mapSettings": {
+      "displayName": "Paramètres de la carte",
+      "properties": {
+        "style": {
+          "displayName": "Style de carte",
+          "type": {
+            "enumeration": [
+              { "displayName": "Standard (OSM)", "value": "osm" },
+              { "displayName": "Clair (CartoDB Light)", "value": "cartoLight" },
+              { "displayName": "Sombre (CartoDB Dark)", "value": "cartoDark" }
+            ]
+          }
+        }
+      }
+    },
+    "markerSettings": {
+      "displayName": "Marqueurs",
+      "properties": {
+        "type": {
+          "displayName": "Type de marqueur",
+          "type": {
+            "enumeration": [
+              { "displayName": "Épingle standard", "value": "pin" },
+              { "displayName": "Cercle", "value": "circle" }
+            ]
+          }
+        },
+        "fill": {
+          "displayName": "Couleur",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "radius": {
+          "displayName": "Taille",
+          "type": { "numeric": true }
+        }
+      }
+    }
+  },
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "latitude": { "max": 1 },
+          "longitude": { "max": 1 }
+        }
+      ],
+      "categorical": {
+        "categories": {
+          "select": [
+            { "for": { "in": "label" } },
+            { "for": { "in": "filters" } }
+          ],
+          "dataReductionAlgorithm": { "top": { "count": 30000 } }
+        },
+        "values": {
+          "select": [
+            { "bind": { "to": "latitude" } },
+            { "bind": { "to": "longitude" } },
+            { "bind": { "to": "description" } }
+          ]
+        }
+      }
+    }
+  ],
+  "supportsHighlight": true,
+  "supportsMultiVisualSelection": true,
+  "tooltips": {
+    "supportedTypes": {
+      "default": true,
+      "canvas": true
+    }
+  },
+  "supportsLandingPage": false,
+  "sorting": {
+    "default": {}
+  },
+  "privileges": [
+    {
+      "name": "WebAccess",
+      "essential": true,
+      "parameters": [
+        "https://*.openstreetmap.org",
+        "https://*.cartocdn.com",
+        "https://*.tile.openstreetmap.org"
+      ]
+    }
+  ]
+}

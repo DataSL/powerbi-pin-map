@@ -1,0 +1,9 @@
+# Ignore build output and dependencies
+node_modules/
+dist/
+.tmp/
+node_modules
+.tmp
+dist
+webpack.statistics.*.html
+*.pbiviz

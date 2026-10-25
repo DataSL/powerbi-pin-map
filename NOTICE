@@ -1,0 +1,18 @@
+Pin Map (Open Source) - Power BI custom visual
+Copyright 2026 DATA SOLUTION LEAD CONSULTING (Data SL Consulting)
+https://data-slconsulting.com/
+
+This product includes software developed by Data SL Consulting
+(https://data-slconsulting.com/), Paris, France.
+
+Any redistribution of this software, modified or not, must include this
+NOTICE file and keep the attribution to Data SL Consulting (Apache License 2.0,
+section 4(d)).
+
+Portions of the source code come from the Microsoft Power BI custom visual
+template (powerbi-visuals-tools), Copyright (c) Microsoft Corporation, licensed
+under the MIT License.
+
+This product uses Leaflet (https://leafletjs.com/), BSD 2-Clause License.
+Map data (c) OpenStreetMap contributors (https://www.openstreetmap.org/copyright).
+Light and dark map tiles (c) CARTO (https://carto.com/attributions).
